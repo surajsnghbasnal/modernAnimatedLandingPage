@@ -1,0 +1,194 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'gilroy';
+    color: #fff;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+main {
+    width: 100%;
+    height: 100vh;
+}
+
+.back {
+    width: 100%;
+    height: 100vh;
+}
+
+.back img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    pointer-events: none;
+}
+
+.workingArea {
+    margin: 0 auto;
+    width: 80%;
+    height: 100vh;
+    max-width: 1920px;
+    position: relative;
+}
+
+.navbar {
+    width: 100%;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar img {
+    height: 60px;
+}
+
+.navLeft,
+.navRight {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.navbar a {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #fff;
+    text-decoration: none;
+    pointer-events: all;
+    font-family: "gilroy";
+}
+
+.hero {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(0%, -50%);
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 30px;
+}
+
+.heroLeft {
+    min-width: 50%;
+}
+
+.heroLeft .elem {
+    position: relative;
+    height: 9vw;
+    overflow: hidden;
+}
+
+.heroLeft .elem h1:nth-child(1) {
+    top: 0;
+}
+
+.heroLeft .elem h1 {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    line-height: .9;
+    font-family: "kajiro";
+    color: #fff;
+    font-weight: 100;
+    font-size: 11vw;
+}
+
+.heroLeft button {
+    font-family: "kajiro";
+    padding: .3vw 3vw;
+    font-size: 2.8vw;
+    margin-top: 2vw;
+    pointer-events: all;
+    cursor: pointer;
+    color: #000;
+}
+
+.heroRight {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    color: #fff;
+    width: 21%;
+}
+
+.heroRight p {
+    text-align: right;
+    font-size: 13px;
+    font-weight: 300;
+}
+
+.heroRight .imgContainer {
+    width: 100%;
+    height: 170px;
+    margin: 20px 0 30px 0;
+    background-image: url(https://images.unsplash.com/photo-1512361436605-a484bdb34b5f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80);
+    background-size: cover;
+    background-position: center center;
+}
+
+.heroRight p:nth-child(3) {
+    margin-bottom: 100px;
+}
+
+@media (max-width:600px) {
+    .workingArea {
+        width: 97%;
+    }
+
+    .navbar {
+        justify-content: space-evenly;
+        gap: 3.5vw;
+    }
+
+    .navbar img {
+        height: 40px;
+    }
+
+    .navLeft,
+    .navRight {
+        gap: 5vw;
+    }
+
+    .heroLeft {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .heroRight {
+        display: none;
+    }
+
+    .heroLeft .elem {
+        height: 20vw;
+    }
+
+    .heroLeft .elem h1 {
+        font-size: 25vw;
+        letter-spacing: 2px;
+    }
+
+    .heroLeft button {
+        font-size: 6vw;
+        font-weight: 100;
+        letter-spacing: 1px;
+        width: fit-content;
+    }
+}
